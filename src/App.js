@@ -11,13 +11,11 @@ const Button = styled.button`
 `
 
 function App() {
-  const [id, setId] = useState()
   const [text, setText] = useState("");
   const [data, setData] = useState([])
-  const [loading, setIsLoading] = useState(true);
 
   const getProduct = async () => {
-    const res = await fetch("https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + text +"?api_key=RGAPI-96ce0fa8-4fca-4aa2-86b7-2df2bd61f134").catch(err => alert("비 정상적인 입력입니다.\n"+ err +"\n(사용자의 문제가 없을 시 운영자에게 연락해주세요.)"))
+    await fetch("https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + text +"?api_key=RGAPI-96ce0fa8-4fca-4aa2-86b7-2df2bd61f134").catch(err => alert("비 정상적인 입력입니다.\n"+ err +"\n(사용자의 문제가 없을 시 운영자에게 연락해주세요.)"))
     .then((res) => res.json())
     .then(data =>  fetch(`https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${data.id}?api_key=RGAPI-96ce0fa8-4fca-4aa2-86b7-2df2bd61f134`)).then(res => res.json()).then(data => setData(data)).catch(err=> console.log(err))
   }

@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import championData from "./championData.js"
 
 const Champion = ({champions}) => {
