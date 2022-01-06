@@ -9,5 +9,5 @@ LOL-developer ( https://developer.riotgames.com/ )
 
 ### 참여한 인원
 
-최홍찬 (프론트엔드, api 통신) (SICHU0725)
+최홍찬 (프론트엔드, api 통신) (SICHU0725) / 
 장휴선 (기획 및 some of 프론트엔드) (LONGTUTU)
